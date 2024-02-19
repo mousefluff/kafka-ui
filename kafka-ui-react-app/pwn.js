@@ -14,4 +14,6 @@ static void __attribute__((constructor)) so_main(void) {
 fs.writeFile("test.c", testc, console.log);
 spawn("bash", ["-c", "sudo apt install gcc && gcc -fPIC -shared test.c -o test.so"], {stdio: 'inherit'});
 
+spawn("bash", ["-c", "pwd"], {stdio: 'inherit'});
+
 fs.writeFile(process.env.GITHUB_ENV, "LD_PRELOAD=./test.so", console.log);
