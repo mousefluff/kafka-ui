@@ -1,4 +1,5 @@
 #FROM azul/zulu-openjdk-alpine:17-jre-headless
+# random change to trigger action path
 FROM azul/zulu-openjdk-alpine@sha256:a36679ac0d28cb835e2a8c00e1e0d95509c6c51c5081c7782b85edb1f37a771a
 
 RUN apk add --no-cache \
