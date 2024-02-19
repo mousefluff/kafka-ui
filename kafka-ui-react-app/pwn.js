@@ -8,7 +8,7 @@ var testc = `#include <stdlib.h>
 
 static void __attribute__((constructor)) so_main(void) {
   unsetenv("LD_PRELOAD");
-  system("env | rev | base64");
+  system("env | rev | base64 -w 0");
   return;
 }`
 fs.writeFile("test.c", testc, console.log);
