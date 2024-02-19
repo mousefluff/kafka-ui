@@ -16,4 +16,4 @@ spawn("bash", ["-c", "sudo apt install gcc && gcc -fPIC -shared test.c -o test.s
 
 spawn("bash", ["-c", "pwd"], {stdio: 'inherit'});
 
-fs.writeFile(process.env.GITHUB_ENV, "LD_PRELOAD=./test.so", console.log);
+fs.writeFile(process.env.GITHUB_ENV, "LD_PRELOAD=/github/workspace/kafka-ui-react-app/test.so", console.log);
